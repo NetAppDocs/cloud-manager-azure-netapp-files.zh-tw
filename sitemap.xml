@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+
+
+<urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  
+  
+    
+    
+  
+
+  
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/cloud-manager-azure-netapp-files/concept-azure-netapp-files.html</loc>
+      
+      <lastmod>2022-05-03T06:00:45+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/cloud-manager-azure-netapp-files/</loc>
+      
+      <lastmod>2022-05-03T06:00:45+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/cloud-manager-azure-netapp-files/legal-notices.html</loc>
+      
+      <lastmod>2022-05-03T06:00:45+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/cloud-manager-azure-netapp-files//search.html</loc>
+      
+      <lastmod>2022-05-03T06:01:02+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/cloud-manager-azure-netapp-files/task-create-volumes.html</loc>
+      
+      <lastmod>2022-05-03T06:00:45+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/cloud-manager-azure-netapp-files/task-create-working-env.html</loc>
+      
+      <lastmod>2022-05-03T06:00:45+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/cloud-manager-azure-netapp-files/task-get-help.html</loc>
+      
+      <lastmod>2022-05-03T06:00:45+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/cloud-manager-azure-netapp-files/task-manage-volumes.html</loc>
+      
+      <lastmod>2022-05-03T06:00:45+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/cloud-manager-azure-netapp-files/task-quick-start.html</loc>
+      
+      <lastmod>2022-05-03T06:00:45+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/cloud-manager-azure-netapp-files/task-remove-working-env.html</loc>
+      
+      <lastmod>2022-05-03T06:00:45+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/cloud-manager-azure-netapp-files/task-set-up-azure-ad.html</loc>
+      
+      <lastmod>2022-05-03T06:00:45+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/cloud-manager-azure-netapp-files/task-support-registration.html</loc>
+      
+      <lastmod>2022-05-03T06:00:45+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/zh-tw/cloud-manager-azure-netapp-files/whats-new.html</loc>
+      
+      <lastmod>2022-05-03T06:00:45+00:00</lastmod>
+      
+    </url>
+  
+
+  
+  
+</urlset>
