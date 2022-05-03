@@ -1,0 +1,124 @@
+---
+sidebar: sidebar 
+permalink: task-create-volumes.html 
+keywords: azure netapp files, create volumes, create nfs volumes, netapp account, capacity pool, create capacity pool, mount path, get mount path, find mount path, mount volume 
+summary: 設定工作環境之後、您就可以建立Azure NetApp Files 各種帳戶、容量資源池和磁碟區。 
+---
+= 建立並掛載Volume以Azure NetApp Files 供使用
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+設定工作環境之後、您就可以建立Azure NetApp Files 各種帳戶、容量資源池和磁碟區。
+
+
+
+== 建立磁碟區
+
+您可以在新 Azure NetApp Files 的或現有的支援帳戶中建立 NFS 或 SMB 磁碟區。
+
+Cloud Manager功能稱為「範本」、可讓您針對特定應用程式（例如資料庫或串流服務）的工作負載需求、建立最佳化的磁碟區。如果您的組織已建立您應該使用的Volume範本、請遵循 <<Create volumes from templates,這些步驟>>。
+
+.開始之前
+* 若要使用SMB、您必須設定DNS和Active Directory。
+* 規劃建立 SMB Volume 時、您必須擁有可連線的 Windows Active Directory 伺服器。建立磁碟區時、您將輸入此資訊。
+
+
+.步驟
+. 開放 Azure NetApp Files 整個作業環境。
+. 按一下「 * 新增 Volume * 」。
+. 在每個頁面上提供必要資訊：
++
+** * 《支援帳戶 * 》：選擇現有的支援帳戶或建立新帳戶。 Azure NetApp Files Azure NetApp Files建立新帳戶時、您也可以選擇要使用的資源群組。
++
+image:screenshot_anf_create_account.png["建立 Azure NetApp Files 一個包含名稱、 Azure 訂閱、位置和資源群組之 Isname 帳戶所需欄位的快照。"]
+
+** * 容量資源池 * ：選取現有的容量資源池或建立新的容量資源池。
++
+如果您建立新的容量集區、則需要指定大小並選取 https://docs.microsoft.com/en-us/azure/azure-netapp-files/azure-netapp-files-service-levels["服務層級"^]。
+
++
+容量集區的最小大小為 4 TB 。您可以指定 4 TB 的倍數大小。
+
+** * 詳細資料與標籤 * ：輸入磁碟區名稱與大小、磁碟區應位於的 vnet 與子網路、以及選擇性地指定磁碟區的標籤。
+** * 傳輸協定 * ：選擇 NFS 或 SMB 傳輸協定、然後輸入所需的資訊。
++
+以下是 NFS 詳細資料的範例。
+
++
+image:screenshot_anf_nfs.gif["設定NFS Volume所需欄位的快照。"]
+
++
+以下是中小企業的詳細資料範例。設定第一個SMB Volume時、您需要在下一頁提供Active Directory資訊。
+
++
+image:screenshot_anf_smb.gif["設定SMB Volume所需欄位的快照。"]
+
+
+
+. 如果您想要根據現有磁碟區的快照來建立此磁碟區、請從Snapshot Name（快照名稱）下拉式清單中選取快照。
+. 按一下 * 新增 Volume * 。
+
+
+新磁碟區會新增至工作環境。
+
+繼續 <<Mount volumes,掛載雲端Volume>>。
+
+
+
+== 從範本建立磁碟區
+
+如果貴組織已建立Azure NetApp Files 了針對特定應用程式的工作負載需求最佳化的功能、以便部署這些磁碟區、請依照本節中的步驟進行。
+
+範本應能讓您的工作更輕鬆、因為範本中已定義了某些Volume參數、例如容量集區、大小、傳輸協定、vnet和磁碟區應位於的子網路等。當參數已預先定義時、您只需跳至下一個Volume參數即可。
+
+.步驟
+. 在「畫版」頁面上、按一下Azure NetApp Files 您要配置Volume的功能區環境。
+. 按一下 image:screenshot_gallery_options.gif["更多按鈕"] >*從範本新增Volume *。
++
+image:screenshot_template_add_vol_anf.png["顯示如何從範本新增磁碟區的快照。"]
+
+. 在「選取範本_」頁面中、選取您要用來建立磁碟區的範本、然後按一下「*下一步*」。
++
+image:screenshot_select_template_anf.png["可用應用程式範本的快照。"]
+
++
+此時會顯示「定義參數_」頁面。
+
++
+image:screenshot_define_anf_vol_from_template.png["顯示空白範本的螢幕快照、您必須填寫才能建立Volume。"]
+
++
+*注意：*如果您想查看這些參數的值、可以按一下「Show read-only parameters*（顯示唯讀參數*）」核取方塊、以顯示範本已鎖定的所有欄位。根據預設、這些預先定義的欄位會隱藏、只會顯示您需要填寫的欄位。
+
+. 新增所有非模板硬編碼的參數值。請參閱 <<Creating volumes,建立磁碟區>> 如需部署Azure NetApp Files 一套解決方案的所有必要參數詳細資訊、請參閱。
+. 定義完此Volume所需的所有參數後、請按一下*執行範本*。
+
+
+Cloud Manager會配置磁碟區並顯示頁面、以便您查看進度。
+
+image:screenshot_template_creating_resource_anf.png["快照顯示從範本建立新磁碟區的進度。"]
+
+然後新磁碟區便會新增至工作環境。
+
+繼續掛載雲端磁碟區。
+
+
+
+== 掛載磁碟區
+
+從 Cloud Manager 存取掛載指示、以便將磁碟區掛載至主機。
+
+.步驟
+. 開啟工作環境。
+. 將游標移到磁碟區上、然後選取 * 掛載磁碟區 * 。
++
+image:screenshot_anf_hover.png["當您將游標暫留在磁碟區上時、可用作業的快照。"]
+
+. 請依照指示來掛載磁碟區。
+

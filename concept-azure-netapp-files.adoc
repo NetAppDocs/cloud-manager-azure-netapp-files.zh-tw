@@ -1,0 +1,69 @@
+---
+sidebar: sidebar 
+permalink: concept-azure-netapp-files.html 
+keywords: azure netapp files, cost, price, features, azure netapp files features, anf, supported regions, azure regions, azure netapp files regions 
+summary: 支援企業在 Azure 中移轉及執行效能密集且對延遲敏感的核心業務關鍵應用程式、而不需重新調整雲端的因素。 Azure NetApp Files 
+---
+= 深入瞭解 Azure NetApp Files
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+支援企業在 Azure 中移轉及執行效能密集且對延遲敏感的核心業務關鍵應用程式、而不需重新調整雲端的因素。 Azure NetApp Files
+
+
+
+== 功能
+
+* 支援多種傳輸協定、可讓 Linux 與 Windows 應用程式在 Azure 中順暢執行。
+* 多個效能層級可與工作負載效能需求緊密一致。
+* SAP HANA、GDPR及HIPAA等領先業界的認證、可將要求最嚴苛的工作負載移轉至Azure。
+
+
+
+
+== Cloud Manager 的其他功能
+
+* 直接從 Cloud Manager 將 NFS 或 SMB 資料移轉 Azure NetApp Files 至支援功能。資料移轉是以 NetApp Cloud Sync 的「支援」服務為後盾。
++
+https://docs.netapp.com/us-en/cloud-manager-sync/concept-cloud-sync.html["深入瞭Cloud Sync 解功能"^]
+
+* Cloud Data Sense採用人工智慧（AI）導向技術、可協助您瞭解資料內容、並識別Azure NetApp Files 駐留在您的不實帳戶中的敏感資料。
++
+https://docs.netapp.com/us-en/cloud-manager-data-sense/concept-cloud-compliance.html["深入瞭解Cloud Data Sense"^]
+
+
+
+
+
+== 成本
+
+https://azure.microsoft.com/pricing/details/netapp/["檢視 Azure NetApp Files 報價"^]
+
+請注意、您的訂閱和收費是 Azure NetApp Files 由不受 Cloud Manager 保護的功能由不受此功能保護的功能所維護。
+
+
+
+== 支援的地區
+
+https://cloud.netapp.com/cloud-volumes-global-regions["檢視支援的 Azure 地區"^]
+
+
+
+== 取得協助
+
+如需 Azure NetApp Files 有關支援方面的技術支援問題、請使用 Azure 入口網站將支援要求記錄給 Microsoft 。選取您的相關 Microsoft 訂閱、然後在 Azure NetApp Files * Storage* 下選取 * 《 * 》服務名稱。提供建立 Microsoft 支援要求所需的其餘資訊。
+
+
+
+== 相關連結
+
+* https://cloud.netapp.com/azure-netapp-files["NetApp Cloud Central Azure NetApp Files"^]
+* https://docs.microsoft.com/azure/azure-netapp-files/["本文檔 Azure NetApp Files"^]
+* https://docs.netapp.com/us-en/cloud-manager-sync/index.html["本文檔 Cloud Sync"^]
+

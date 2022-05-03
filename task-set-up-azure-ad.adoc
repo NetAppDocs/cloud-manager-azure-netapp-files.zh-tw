@@ -1,0 +1,128 @@
+---
+sidebar: sidebar 
+permalink: task-set-up-azure-ad.html 
+keywords: azure netapp files, azure netapp files permissions, azure permissions, active directory, application, ad application, ad app, app, service principal 
+summary: Cloud Manager 需要權限來設定及管理 Azure NetApp Files 功能。您可以建立及設定Azure Active Directory應用程式、並取得Cloud Manager所需的Azure認證資料、將必要的權限授予Azure帳戶。 
+---
+= 設定 Azure AD 應用程式
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Cloud Manager 需要權限來設定及管理 Azure NetApp Files 功能。您可以建立及設定Azure Active Directory（AD）應用程式、並取得Cloud Manager所需的Azure認證資料、將必要的權限授予Azure帳戶。
+
+
+
+== 建立AD應用程式
+
+建立Azure AD應用程式與服務主體、讓Cloud Manager可用於角色型存取控制。
+
+您必須在 Azure 中擁有適當權限、才能建立 Active Directory 應用程式、並將應用程式指派給角色。如需詳細資訊、請參閱 https://docs.microsoft.com/en-us/azure/active-directory/develop/howto-create-service-principal-portal#required-permissions/["Microsoft Azure 說明文件：必要權限"^]。
+
+.步驟
+. 從 Azure 入口網站開啟 * Azure Active Directory * 服務。
++
+image:screenshot_azure_ad.gif["顯示Microsoft Azure中Active Directory服務的快照。"]
+
+. 在功能表中、按一下 * 應用程式註冊 * 。
+. 建立應用程式：
++
+.. 按一下「 * 新登錄 * 」。
+.. 指定應用程式的詳細資料：
++
+*** * 名稱 * ：輸入應用程式的名稱。
+*** * 帳戶類型 * ：選取帳戶類型（任何帳戶類型都可與 Cloud Manager 搭配使用）。
+*** * 重新導向 URI* ：您可以保留此空白。
+
+
+.. 按一下 * 註冊 * 。
+
+
+. 複製 * 應用程式（用戶端） ID* 和 * 目錄（租戶） ID* 。
++
+image:screenshot_anf_app_ids.gif["顯示 Azure Active Directory 中應用程式的應用程式（用戶端） ID 和目錄（租戶） ID 的快照。"]
+
++
+在 Azure NetApp Files Cloud Manager 中建立功能不全的環境時、您需要提供應用程式的應用程式（用戶端） ID 和目錄（租戶） ID 。Cloud Manager 會使用 ID 以程式設計方式登入。
+
+. 為應用程式建立用戶端機密、以便 Cloud Manager 使用它來驗證 Azure AD ：
++
+.. 按一下 * 「憑證與機密」 > 「新用戶端機密」 * 。
+.. 提供機密與持續時間的說明。
+.. 按一下「 * 新增 * 」。
+.. 複製用戶端機密的值。
++
+image:screenshot_anf_client_secret.gif["Azure 入口網站的快照、顯示 Azure AD 服務主體的用戶端機密。"]
+
+
+
+
+
+您的 AD 應用程式現在已設定完成、您應該已經複製應用程式（用戶端） ID 、目錄（租戶） ID 、以及用戶端機密的值。當您新增 Azure NetApp Files 功能正常的環境時、必須在 Cloud Manager 中輸入此資訊。
+
+
+
+== 將應用程式指派給角色
+
+您必須將服務主體繫結至您的 Azure 訂閱、並指派具有必要權限的自訂角色給它。
+
+.步驟
+. https://docs.microsoft.com/en-us/azure/role-based-access-control/custom-roles["在 Azure 中建立自訂角色"^]。
++
+下列步驟說明如何從Azure入口網站建立角色。
+
++
+.. 開啟訂閱、然後按一下 * 存取控制（ IAM ） * 。
+.. 按一下「 * 新增 > 新增自訂角色 * 」。
++
+image:screenshot_azure_access_control.gif["顯示在Azure入口網站中新增自訂角色的步驟快照。"]
+
+.. 在「 * 基礎知識 * 」標籤中、輸入角色的名稱和說明。
+.. 按一下「 * JSON* 」、然後按一下「 * 編輯 * 」、此「編輯 * 」會顯示在 JSON* 格式的右上角。
+.. 在_actions_下新增下列權限：
++
+[source, json]
+----
+"actions": [
+    "Microsoft.NetApp/*",
+    ],
+----
+.. 按一下「 * 儲存 * 」、按一下「 * 下一步 * 」、然後按一下「 * 建立 * 」。
+
+
+. 現在請將應用程式指派給您剛建立的角色：
++
+.. 從 Azure 入口網站開啟 * 訂閱 * 服務。
+.. 選取訂閱。
+.. 按一下 * 存取控制（ IAM ） > 新增 > 新增角色指派 * 。
+.. 在「*角色*」索引標籤中、選取您所建立的自訂角色、然後按一下「*下一步*」。
+.. 在「*成員*」索引標籤中、完成下列步驟：
++
+*** 保留*選取「使用者」、「群組」或「服務主體」*。
+*** 按一下*選取成員*。
++
+image:screenshot-azure-anf-role.png["Azure入口網站的快照、會在新增角色至應用程式時顯示「成員」索引標籤。"]
+
+*** 搜尋應用程式名稱。
++
+範例如下：
+
++
+image:screenshot_anf_app_role.png["Azure入口網站的快照、顯示Azure入口網站中的「新增角色指派」表單。"]
+
+*** 選取應用程式、然後按一下*選取*。
+*** 單擊 * 下一步 * 。
+
+
+.. 按一下「*檢閱+指派*」。
++
+Cloud Manager 的服務主體現在擁有該訂閱所需的 Azure 權限。
+
+
+
+

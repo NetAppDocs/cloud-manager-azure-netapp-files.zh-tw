@@ -1,0 +1,73 @@
+---
+sidebar: sidebar 
+permalink: whats-new.html 
+keywords: 'what"s new, features, new, release notes, bugs, limitations, known issues, enhancements, fixes' 
+summary: 瞭Azure NetApp Files 解Cloud Manager的支援功能的最新功能。 
+---
+= 新功能
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+瞭Azure NetApp Files 解Cloud Manager的更新功能。
+
+
+
+== 2021年4月11日
+
+
+
+=== 支援Volume範本
+
+全新的應用程式範本服務可讓您設定Azure NetApp Files 適用於各種應用程式的Volume範本。範本應能讓您的工作更輕鬆、因為範本中已定義了某些Volume參數、例如容量集區、大小、傳輸協定、vnet和磁碟區應位於的子網路等。當參數已預先定義時、您只需跳至下一個Volume參數即可。
+
+* https://docs.netapp.com/us-en/cloud-manager-app-template/concept-resource-templates.html["深入瞭解應用程式範本、以及如何在環境中使用這些範本"^]
+* https://docs.netapp.com/us-en/cloud-manager-azure-netapp-files/task-create-volumes.html["瞭解如何Azure NetApp Files 從範本建立一套功能不全的功能"]
+
+
+
+
+== 2021年3月8日
+
+
+
+=== 動態變更服務層級
+
+您現在可以動態變更磁碟區的服務層級、以滿足工作負載需求並最佳化成本。該磁碟區會移至其他容量集區、而不會影響該磁碟區。
+
+https://docs.netapp.com/us-en/cloud-manager-azure-netapp-files/task-manage-volumes.html#change-the-volumes-service-level["瞭解如何變更Volume的服務層級"]。
+
+
+
+== 2020年8月3日
+
+
+
+=== 設定與管理Azure NetApp Files
+
+直接從Cloud Manager設定及管理Azure NetApp Files 功能。建立Azure NetApp Files 一個不完整的工作環境之後、您可以完成下列工作：
+
+* 建立NFS和SMB磁碟區。
+* 管理容量資源池和Volume快照
++
+Cloud Manager可讓您建立、刪除及還原Volume快照。您也可以建立新的容量集區、並指定其服務層級。
+
+* 變更磁碟區的大小及管理標記、以編輯磁碟區。
+
+
+直接Azure NetApp Files 從Cloud Manager建立及管理功能可取代先前的資料移轉功能。
+
+
+
+== 2020年4月5日
+
+
+
+=== 資料移轉至Azure NetApp Files
+
+您現在可以Azure NetApp Files 直接從Cloud Manager將NFS或SMB資料移轉至支援功能。資料同步是由NetApp Cloud Sync 的《不同步服務（Syncss）：

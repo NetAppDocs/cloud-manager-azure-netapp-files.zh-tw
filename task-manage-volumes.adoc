@@ -1,0 +1,75 @@
+---
+sidebar: sidebar 
+permalink: task-manage-volumes.html 
+keywords: azure netapp files, delete volumes, delete nfs volumes, netapp account, capacity pool, change service level 
+summary: 設定工作環境之後、您可以管理Azure NetApp Files 各種帳戶、容量資源池、磁碟區和快照。 
+---
+= 管理Volume以供Azure NetApp Files 使用
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+您可以在儲存需求變更時管理現有的磁碟區。您可以編輯磁碟區、變更磁碟區的服務層級、管理Snapshot複本、以及刪除磁碟區。
+
+
+
+== 編輯磁碟區的大小和標記
+
+建立磁碟區之後、您可以隨時修改其大小和標記。
+
+.步驟
+. 開啟工作環境。
+. 將游標暫留在磁碟區上、然後選取 * 編輯 * 。
+. 視需要修改大小和標記。
+. 按一下「 * 套用 * 」。
+
+
+
+
+== 變更磁碟區的服務層級
+
+建立磁碟區之後、只要目的地容量集區已經存在、您就可以隨時變更服務層級。
+
+.步驟
+. 開啟工作環境。
+. 將游標移到磁碟區上、然後選取*變更服務層級*。
+. 選取提供所需服務層級的容量集區。
+. 按一下 * 變更 * 。
+
+
+該磁碟區會移至其他容量集區、而不會影響該磁碟區。
+
+
+
+== 管理Snapshot複本
+
+Snapshot 複本提供磁碟區的時間點複本。建立 Snapshot 複本、將資料還原至新磁碟區、以及刪除 Snapshot 複本。
+
+.步驟
+. 開啟工作環境。
+. 將游標暫留在磁碟區上、然後選擇其中一個可用選項來管理 Snapshot 複本：
++
+** * 建立 Snapshot 複本 *
+** *將磁碟區還原為Snapshot *
+** * 刪除 Snapshot 複本 *
+
+
+. 依照提示完成選取的動作。
+
+
+
+
+== 刪除Volume
+
+刪除不再需要的磁碟區。
+
+.步驟
+. 開啟工作環境。
+. 將游標暫留在磁碟區上、然後按一下 * 刪除 * 。
+. 確認您要刪除該磁碟區。
+

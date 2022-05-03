@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<blocks>
+  <block id="d29fe95ea2ec23abbb9e421759e64b76" category="summary">適用於核心商業應用程式的Microsoft Azure原生高效能檔案儲存服務。Azure NetApp Files本文件說明如何Azure NetApp Files 使用NetApp Cloud Manager設定及管理功能。</block>
+  <block id="6c32a3d0f1a665987b98dde5a0f96d7d" category="doc">本文檔 Azure NetApp Files</block>
+  <block id="d9ce9b41f2053c22760c9212b1f8a063" category="summary">在您設定Azure Active Directory應用程式之後、Azure NetApp Files 請在Cloud Manager中建立一個運作不正常的環境、以便您開始建立所需的磁碟區。</block>
+  <block id="c5c12e22be965b4ae0e9fc5e1618bdbe" category="doc">打造 Azure NetApp Files 一個不一樣的工作環境</block>
+  <block id="8952189c40e72880516b5d0e74b846e2" category="paragraph">在您設定Azure Active Directory應用程式之後、Azure NetApp Files 請在Cloud Manager中建立一個運作不正常的環境、以便您開始建立所需的磁碟區。</block>
+  <block id="f3a29486bed19a90f2da6d007818b427" category="list-title">步驟</block>
+  <block id="71f39774f72466b34fa315e04ab5f4a1" category="list-text">在「畫版」頁面中、按一下「 * 新增工作環境 * 」。</block>
+  <block id="c67d1c774e8a4bdd8581dc693236aa4d" category="list-text">選擇 * Microsoft Azure * 、然後選擇 * Azure NetApp Files 《 * 》。</block>
+  <block id="44d9c1472225c5cada2a898e403242e6" category="list-text">提供您先前設定之 AD 應用程式的詳細資料。</block>
+  <block id="54cdf2467ba32a755c7c96d45ce87ed5" category="inline-image-macro">建立 Azure NetApp Files 功能不全的環境所需欄位的快照、其中包含名稱、應用程式 ID 、用戶端機密和目錄 ID 。</block>
+  <block id="41b7388474e973fc8cb64862d2cb06f5" category="paragraph"><block ref="41b7388474e973fc8cb64862d2cb06f5" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="7dee7e783d13b6d5d415926ce0bfc306" category="list-text">按一下「 * 新增 * 」。</block>
+  <block id="b6a6d7c8275174f2de092d93ad59b406" category="paragraph">現在您應該擁有 Azure NetApp Files 一個不再只是運作的環境。</block>
+  <block id="c6cfa7b72473b659c12fde377c3c0fd2" category="inline-image-macro">一份關於整個作業環境的快照 Azure NetApp Files 。</block>
+  <block id="fc59e05409a5663145615b064d40391a" category="paragraph"><block ref="fc59e05409a5663145615b064d40391a" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="2d8388ef854dfa09cecb11936ccce248" category="inline-link-macro">開始建立及管理磁碟區</block>
+  <block id="7287a568988e3d4791216dba265eeae9" category="paragraph"><block ref="1e09faaddd6af4b1a47324cf37312df0" category="inline-link-macro-rx"></block>。</block>
+  <block id="e1f73accab4865ec518a6e2a1dcfe2a0" category="summary">Cloud Manager 需要權限來設定及管理 Azure NetApp Files 功能。您可以建立及設定Azure Active Directory應用程式、並取得Cloud Manager所需的Azure認證資料、將必要的權限授予Azure帳戶。</block>
+  <block id="9f6195430155a4712fbd4733de1876ca" category="doc">設定 Azure AD 應用程式</block>
+  <block id="75c9da083cfcbcf861307c74d4e8455a" category="paragraph">Cloud Manager 需要權限來設定及管理 Azure NetApp Files 功能。您可以建立及設定Azure Active Directory（AD）應用程式、並取得Cloud Manager所需的Azure認證資料、將必要的權限授予Azure帳戶。</block>
+  <block id="250e9326aa08333e3f698ab1ba29c77e" category="section-title">建立AD應用程式</block>
+  <block id="74d1a939799437de1aebdd73c8d188d3" category="paragraph">建立Azure AD應用程式與服務主體、讓Cloud Manager可用於角色型存取控制。</block>
+  <block id="9e0b4c608c2ed027fef07ddc68aae407" category="inline-link">Microsoft Azure 說明文件：必要權限</block>
+  <block id="f628a927678590abbad75664aa87e9c9" category="paragraph">您必須在 Azure 中擁有適當權限、才能建立 Active Directory 應用程式、並將應用程式指派給角色。如需詳細資訊、請參閱<block ref="f85f976c363ea77b8f2232a1ebbc4d2d" category="inline-link-rx"></block>。</block>
+  <block id="c9bae6707a626ab71ed3b97345b5becf" category="list-text">從 Azure 入口網站開啟 * Azure Active Directory * 服務。</block>
+  <block id="abcaecfb112ec16a9054b876f99d7cf4" category="inline-image-macro">顯示Microsoft Azure中Active Directory服務的快照。</block>
+  <block id="68c3725b0e9e056e03b80e909714f158" category="paragraph"><block ref="68c3725b0e9e056e03b80e909714f158" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="af88b24a1b0f5294f806d8d9f2744f27" category="list-text">在功能表中、按一下 * 應用程式註冊 * 。</block>
+  <block id="cce8aa4eda34a5338284d12bd518d218" category="list-text">建立應用程式：</block>
+  <block id="0e1ac21d4b9ed97a0c89007cafe6b733" category="list-text">按一下「 * 新登錄 * 」。</block>
+  <block id="c9034af778b085a9440ffcb8389cc4db" category="list-text">指定應用程式的詳細資料：</block>
+  <block id="46beecb01aa2327ae1886dfc53955977" category="list-text">* 名稱 * ：輸入應用程式的名稱。</block>
+  <block id="b44b0044d94eea0dfc4d5390f57210ab" category="list-text">* 帳戶類型 * ：選取帳戶類型（任何帳戶類型都可與 Cloud Manager 搭配使用）。</block>
+  <block id="135a1682a5c17ecdf84e57a4dc0c0959" category="list-text">* 重新導向 URI* ：您可以保留此空白。</block>
+  <block id="9909e23ede42f2318acada35ac10bd3e" category="list-text">按一下 * 註冊 * 。</block>
+  <block id="e762ce4f71e8abc9d8deee4d4b7277fe" category="list-text">複製 * 應用程式（用戶端） ID* 和 * 目錄（租戶） ID* 。</block>
+  <block id="8fd7e29954792b2ee199fcf4fb0e7dec" category="inline-image-macro">顯示 Azure Active Directory 中應用程式的應用程式（用戶端） ID 和目錄（租戶） ID 的快照。</block>
+  <block id="5ad288ed66148804e3cf03d2bc5454e7" category="paragraph"><block ref="5ad288ed66148804e3cf03d2bc5454e7" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="506668eebbea5e4488a02c02942b5090" category="paragraph">在 Azure NetApp Files Cloud Manager 中建立功能不全的環境時、您需要提供應用程式的應用程式（用戶端） ID 和目錄（租戶） ID 。Cloud Manager 會使用 ID 以程式設計方式登入。</block>
+  <block id="8dafb3bad019ebbc8a72e153571d1561" category="list-text">為應用程式建立用戶端機密、以便 Cloud Manager 使用它來驗證 Azure AD ：</block>
+  <block id="814ab761b05ac26a224a99eac97f2f4d" category="list-text">按一下 * 「憑證與機密」 &gt; 「新用戶端機密」 * 。</block>
+  <block id="56c696c4118c8dc3d2947c159fdbbb7c" category="list-text">提供機密與持續時間的說明。</block>
+  <block id="a91d60261e2974b6b9f5d3d3d0abacdd" category="list-text">複製用戶端機密的值。</block>
+  <block id="5a3a4c596a95b6a9851a1c7b6539b0ea" category="inline-image-macro">Azure 入口網站的快照、顯示 Azure AD 服務主體的用戶端機密。</block>
+  <block id="950ba75831d4d2d13e40a65143eb8494" category="paragraph"><block ref="950ba75831d4d2d13e40a65143eb8494" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="db9dfec68245148f18aaf120679c64f0" category="paragraph">您的 AD 應用程式現在已設定完成、您應該已經複製應用程式（用戶端） ID 、目錄（租戶） ID 、以及用戶端機密的值。當您新增 Azure NetApp Files 功能正常的環境時、必須在 Cloud Manager 中輸入此資訊。</block>
+  <block id="50cb14609454c06c47e95e9d8a56adb5" category="section-title">將應用程式指派給角色</block>
+  <block id="4c52768b52ca020200e5a926929d951d" category="paragraph">您必須將服務主體繫結至您的 Azure 訂閱、並指派具有必要權限的自訂角色給它。</block>
+  <block id="c7fd7910cc533c79ed570ea74704425d" category="inline-link">在 Azure 中建立自訂角色</block>
+  <block id="ef25c1a0b85945d65e29d5346a5dd23f" category="list-text"><block ref="e0180ab247b74a9d02ca0dcc4d9ef2d3" category="inline-link-rx"></block>。</block>
+  <block id="10952fdd0e78f38d00c02822bb64d9b1" category="paragraph">下列步驟說明如何從Azure入口網站建立角色。</block>
+  <block id="e2ae07d27d3384c0537318da23aa8883" category="list-text">開啟訂閱、然後按一下 * 存取控制（ IAM ） * 。</block>
+  <block id="1ea0456d996b2276ee91fd4362bb66bb" category="list-text">按一下「 * 新增 &gt; 新增自訂角色 * 」。</block>
+  <block id="639c5e298e30f6fe93b20d922ea17933" category="inline-image-macro">顯示在Azure入口網站中新增自訂角色的步驟快照。</block>
+  <block id="bf972dc955fe2e7fb9df0a81d06fb348" category="paragraph"><block ref="bf972dc955fe2e7fb9df0a81d06fb348" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="f8dea6ae979907327757e0387e92f235" category="list-text">在「 * 基礎知識 * 」標籤中、輸入角色的名稱和說明。</block>
+  <block id="8060604257723ca88e5c0b4aae811455" category="list-text">按一下「 * JSON* 」、然後按一下「 * 編輯 * 」、此「編輯 * 」會顯示在 JSON* 格式的右上角。</block>
+  <block id="d5d094d4ecda4349274d6b72850a5740" category="list-text">在_actions_下新增下列權限：</block>
+  <block id="afa30cd5df0391dfd6e11ab6184d695b" category="list-text">按一下「 * 儲存 * 」、按一下「 * 下一步 * 」、然後按一下「 * 建立 * 」。</block>
+  <block id="1b9c98eb7545f64f6a6464cd44cdd443" category="list-text">現在請將應用程式指派給您剛建立的角色：</block>
+  <block id="973ddd4ad0d28fecb4f9f0a53ca5ab21" category="list-text">從 Azure 入口網站開啟 * 訂閱 * 服務。</block>
+  <block id="9d13605979e591928497f3c94aa907c2" category="list-text">選取訂閱。</block>
+  <block id="8174c4d89029818113468594f8347c70" category="list-text">按一下 * 存取控制（ IAM ） &gt; 新增 &gt; 新增角色指派 * 。</block>
+  <block id="5ecfbe785b688e69623e230a6d069787" category="list-text">在「*角色*」索引標籤中、選取您所建立的自訂角色、然後按一下「*下一步*」。</block>
+  <block id="0a6c621aa17fc5940d876eaadda3bb73" category="list-text">在「*成員*」索引標籤中、完成下列步驟：</block>
+  <block id="8663f7025266bcb72c4429db8da6c602" category="list-text">保留*選取「使用者」、「群組」或「服務主體」*。</block>
+  <block id="e567d156455b03053b50302bf4ff266e" category="list-text">按一下*選取成員*。</block>
+  <block id="0972e60de3c49ba718e1aa6c9313eebc" category="inline-image-macro">Azure入口網站的快照、會在新增角色至應用程式時顯示「成員」索引標籤。</block>
+  <block id="3030207711e0d379c8a6c67f942d7c72" category="paragraph"><block ref="3030207711e0d379c8a6c67f942d7c72" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="33aa57c696b6d88350adf8cda157f866" category="list-text">搜尋應用程式名稱。</block>
+  <block id="4d947fe0b5c4693f487f4fd1a4295c99" category="paragraph">範例如下：</block>
+  <block id="f6f55020a29188338bc94800ac249ad7" category="inline-image-macro">Azure入口網站的快照、顯示Azure入口網站中的「新增角色指派」表單。</block>
+  <block id="479d1c5255b557f4e6e3afb3beda5366" category="paragraph"><block ref="479d1c5255b557f4e6e3afb3beda5366" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="e33ca9bd2b94654f882a0e0ed82dec19" category="list-text">選取應用程式、然後按一下*選取*。</block>
+  <block id="5a378b18f7bf0c4cabc6c655cd2f535e" category="list-text">單擊 * 下一步 * 。</block>
+  <block id="e3bbb08034982e47da96f9df0529c14b" category="list-text">按一下「*檢閱+指派*」。</block>
+  <block id="b766fee3733d5baed5f39a28e1c936dd" category="paragraph">Cloud Manager 的服務主體現在擁有該訂閱所需的 Azure 權限。</block>
+  <block id="ce21e7ae4271271294ccbf54c8fd6864" category="summary">NetApp以多種方式支援Cloud Manager。我們全年無休提供豐富的免費自助支援選項、例如知識庫（KB）文章和社群論壇。您的支援註冊包括透過網路票證提供遠端技術支援。</block>
+  <block id="fabfc25ef8996fd90836e58a4c0b26b6" category="doc">取得協助</block>
+  <block id="51719eefc68685ac0e2a11057a44b8be" category="paragraph">NetApp以多種方式支援Cloud Manager及其雲端服務。我們全年無休提供豐富的免費自助支援選項、例如知識庫（KB）文章和社群論壇。您的支援註冊包括透過網路票證提供遠端技術支援。</block>
+  <block id="07d41912a6ab6b97216f8cf89e93205c" category="section-title">自我支援</block>
+  <block id="5e4b821a1a82558dead1ef6961e90666" category="paragraph">這些選項可供免費使用、一天24小時、一週7天：</block>
+  <block id="19111351b69b6b15668130b38b7f6038" category="inline-link">知識庫</block>
+  <block id="fd6bb4fa1ad0caeedd6782d92cc54ea3" category="list-text"><block ref="fd6bb4fa1ad0caeedd6782d92cc54ea3" category="inline-link-rx"></block></block>
+  <block id="76b571fb5edea1c1994fa0ff01f7b1e2" category="paragraph">請搜尋Cloud Manager知識庫、找出有助於疑難排解問題的文章。</block>
+  <block id="14526abd8bda5af347775025cd5342cf" category="inline-link">社群</block>
+  <block id="410fdb9caa9c64da2ff3f88f4836960d" category="list-text"><block ref="410fdb9caa9c64da2ff3f88f4836960d" category="inline-link-rx"></block></block>
+  <block id="7f3490343cad8dc3bfdb72dd5d957e8d" category="paragraph">加入Cloud Manager社群、追蹤後續討論或建立新討論。</block>
+  <block id="5b6cf869265c13af8566f192b4ab3d2a" category="list-text">文件</block>
+  <block id="3c313458d6e15dd2c4336e47118d0a8f" category="paragraph">您目前正在檢視的Cloud Manager文件。</block>
+  <block id="80b1b0d2b1ebf2b3cba2d25759801afd" category="list-text">mailto：ng-cloudmanager-feedback@netapp.com [意見反應電子郵件]</block>
+  <block id="bff60abbc46aceed0f73a3a4f6cfb123" category="paragraph">我們非常重視您的意見。提交意見反應、協助我們改善Cloud Manager。</block>
+  <block id="0659d428df833a806e29e65e632d380a" category="section-title">NetApp支援</block>
+  <block id="c91b5a63849b8d2db01014ed33192735" category="paragraph">除了上述的自我支援選項、您也可以與NetApp支援工程師合作、在您啟動支援之後解決任何問題。</block>
+  <block id="6c08c57e382a25a778455184cd9b1a4a" category="list-text">在Cloud Manager中、按一下*「說明」&gt;「支援」*。</block>
+  <block id="f5052c65917d7341726235d4d4941461" category="list-text">在「Technical Support（技術支援）」下選擇可用的選項之一：</block>
+  <block id="bece28b158ab337d9ed24b00d7d02cc7" category="list-text">按一下*致電我們*以尋找NetApp技術支援的電話號碼。</block>
+  <block id="efe81cff8e6f47ec59ef94167b76bf5a" category="list-text">按一下「*開啟問題*」、選取其中一個選項、然後按一下「*傳送*」。</block>
+  <block id="cbb1040836732e478409dacf7e45171a" category="paragraph">NetApp代表將審查您的案例、並盡快回覆您。</block>
+  <block id="314401814eaa768c4f6d593c27a2981d" category="summary">此動作會從 Azure NetApp Files Cloud Manager 移除不必要的功能。它不會刪除 Azure NetApp Files 您的不知道帳戶或磁碟區。您可以 Azure NetApp Files 隨時將此資料加入 Cloud Manager 。</block>
+  <block id="a5cd00357f60ad0eaa681bb68df15c6d" category="doc">移除Azure NetApp Files</block>
+  <block id="3bf992a109f2a93d6d964ab2c501e805" category="list-text">開放 Azure NetApp Files 整個作業環境。</block>
+  <block id="efe74b5ca066da05f9df0c24eabbf492" category="list-text">在頁面右上角、選取「 actions （動作）」功能表、然後按一下「 * 移除 Azure NetApp Files 」「 S供 參考 * 」。</block>
+  <block id="a6ca89f466d19e87794988d8a1f25d64" category="inline-image-macro">按一下「移除Azure NetApp Files 不全」以從Cloud Manager介面移除磁碟區的快照。</block>
+  <block id="90ab7d419e5b436936c80f21ee230621" category="paragraph"><block ref="90ab7d419e5b436936c80f21ee230621" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="40b851aafab82c78484c46169f816fd2" category="list-text">按一下「 * 移除 * 」以確認。</block>
+  <block id="00cac13dd28e1d8ca100e2d8ab02878c" category="summary">設定工作環境之後、您可以管理Azure NetApp Files 各種帳戶、容量資源池、磁碟區和快照。</block>
+  <block id="a420aa39e55724ac60bb395b9bf12764" category="doc">管理Volume以供Azure NetApp Files 使用</block>
+  <block id="a2669b974873fd7c51079b5fcd7d7946" category="paragraph">您可以在儲存需求變更時管理現有的磁碟區。您可以編輯磁碟區、變更磁碟區的服務層級、管理Snapshot複本、以及刪除磁碟區。</block>
+  <block id="ccd1e3f45b11b099e3c0b496b85d3de2" category="section-title">編輯磁碟區的大小和標記</block>
+  <block id="8cbb6213062bff0f8ae5d9232049a4ae" category="paragraph">建立磁碟區之後、您可以隨時修改其大小和標記。</block>
+  <block id="6c970f68c7cf5a446d127ac3ab6d72f7" category="list-text">開啟工作環境。</block>
+  <block id="8acb095feb0a7824e13dd4cff484b450" category="list-text">將游標暫留在磁碟區上、然後選取 * 編輯 * 。</block>
+  <block id="c94fd6f55752bbd9d6ff1d91b90b2493" category="list-text">視需要修改大小和標記。</block>
+  <block id="400fae8e788b3721b9ac25fe01f04f50" category="list-text">按一下「 * 套用 * 」。</block>
+  <block id="5272013d2eeaeeab681fb8ba8c4d5a2e" category="section-title">變更磁碟區的服務層級</block>
+  <block id="43e1a577b6b8efef38b66ad99c2617e3" category="paragraph">建立磁碟區之後、只要目的地容量集區已經存在、您就可以隨時變更服務層級。</block>
+  <block id="2b59b840a5b967b90d4d7ab8b92489af" category="list-text">將游標移到磁碟區上、然後選取*變更服務層級*。</block>
+  <block id="83f077d776e69552c4da718ba6cb17ce" category="list-text">選取提供所需服務層級的容量集區。</block>
+  <block id="e825f597d53c4a593117f3470853a08a" category="list-text">按一下 * 變更 * 。</block>
+  <block id="538a392da8eeab76314db8254ebf544b" category="paragraph">該磁碟區會移至其他容量集區、而不會影響該磁碟區。</block>
+  <block id="e479d2534f323a1275e2ed0809755e56" category="section-title">管理Snapshot複本</block>
+  <block id="e8ae2d2b47ef8fe5d9635ba5138d815e" category="paragraph">Snapshot 複本提供磁碟區的時間點複本。建立 Snapshot 複本、將資料還原至新磁碟區、以及刪除 Snapshot 複本。</block>
+  <block id="072ce5964f5857c89ec5dc601b703af3" category="list-text">將游標暫留在磁碟區上、然後選擇其中一個可用選項來管理 Snapshot 複本：</block>
+  <block id="77920e8d9473162a2167976898eaa180" category="list-text">* 建立 Snapshot 複本 *</block>
+  <block id="ac5983a9eada1c7d1b2571955cdabebc" category="list-text">*將磁碟區還原為Snapshot *</block>
+  <block id="b4d6c5073915bd6ebc84d2c6c45d666f" category="list-text">* 刪除 Snapshot 複本 *</block>
+  <block id="df95b2ddbeefe0bd257bae9d1c7d663a" category="list-text">依照提示完成選取的動作。</block>
+  <block id="f91674f3b22216fc484532cd24dda908" category="section-title">刪除Volume</block>
+  <block id="9497c556620605c0441cf034ff68a527" category="paragraph">刪除不再需要的磁碟區。</block>
+  <block id="0dedd92db5a9dbde64f4da7d6f9d44b2" category="list-text">將游標暫留在磁碟區上、然後按一下 * 刪除 * 。</block>
+  <block id="085b0943196ae7c43e0a95af45bc731f" category="list-text">確認您要刪除該磁碟區。</block>
+  <block id="d41d8cd98f00b204e9800998ecf8427e" category="summary"></block>
+  <block id="30d965eef5ba25c6b9998ae38270b43e" category="doc">法律聲明</block>
+  <block id="e9c44bbfd795a5d63d74c6a77afee70d" category="paragraph">法律聲明提供版權聲明、商標、專利等存取權限。</block>
+  <block id="6016a2b341113bf496b719905398ecd2" category="section-title">版權</block>
+  <block id="09e95b77ffe81fe465a83ba99efad5c8" category="paragraph"><block ref="09e95b77ffe81fe465a83ba99efad5c8" category="inline-link-rx"></block></block>
+  <block id="126a02652da6de02962cf1b654fd6376" category="section-title">商標</block>
+  <block id="c4ce4761e466527d26b3e3d5ed1006fd" category="paragraph">NetApp 、 NetApp 標誌及 NetApp 商標頁面上列出的標章均為 NetApp 、 Inc. 的商標。其他公司與產品名稱可能為其各自所有者的商標。</block>
+  <block id="7aa531e9acfe2b98e34d2c92fe9846ff" category="paragraph"><block ref="7aa531e9acfe2b98e34d2c92fe9846ff" category="inline-link-rx"></block></block>
+  <block id="be89498d2f8a22ce47c02ba9795fe2af" category="section-title">專利</block>
+  <block id="d0b19d36be2c5f16e9aef46c8a452d3d" category="paragraph">如需最新的 NetApp 擁有專利清單、請參閱：</block>
+  <block id="d7f1fbcf9ce4e42f705add574d262b2c" category="paragraph"><block ref="d7f1fbcf9ce4e42f705add574d262b2c" category="inline-link-rx"></block></block>
+  <block id="56c34c6410dd45c5cec44149ad0ce037" category="section-title">隱私權政策</block>
+  <block id="fc248f74f5e36542f7f5627b8610e9a3" category="paragraph"><block ref="fc248f74f5e36542f7f5627b8610e9a3" category="inline-link-rx"></block></block>
+  <block id="c0227cef6f07a8cd2ac72f2945b031aa" category="section-title">開放原始碼</block>
+  <block id="9b73989307c1975dfa4d5e1581e4afe8" category="paragraph">通知檔案提供有關 NetApp 軟體所使用之協力廠商版權與授權的資訊。</block>
+  <block id="4940124e8487cb4ea36f1511a195cf66" category="inline-link-macro">Cloud Manager 3.9 注意事項</block>
+  <block id="c069fcc68c5dfa73ccc99924c836cae9" category="paragraph"><block ref="c069fcc68c5dfa73ccc99924c836cae9" category="inline-link-macro-rx"></block></block>
+  <block id="111f8adcabf0dbf53cb2df15a658fa78" category="summary">瞭Azure NetApp Files 解Cloud Manager的支援功能的最新功能。</block>
+  <block id="490414e0366b091220802d406e52c076" category="doc">新功能</block>
+  <block id="38846f2e814afa2a7bb17dd217e62420" category="paragraph">瞭Azure NetApp Files 解Cloud Manager的更新功能。</block>
+  <block id="29c251ed5a57bbffe470654ccbbe714c" category="section-title">2021年4月11日</block>
+  <block id="860941d67aa8a8a442ba4a65191838cf" category="section-title">支援Volume範本</block>
+  <block id="28c1b76e8b0c8f418301bc750b4e9f0e" category="paragraph">全新的應用程式範本服務可讓您設定Azure NetApp Files 適用於各種應用程式的Volume範本。範本應能讓您的工作更輕鬆、因為範本中已定義了某些Volume參數、例如容量集區、大小、傳輸協定、vnet和磁碟區應位於的子網路等。當參數已預先定義時、您只需跳至下一個Volume參數即可。</block>
+  <block id="65d2e55c231c87b516e734e63f823cf5" category="inline-link">深入瞭解應用程式範本、以及如何在環境中使用這些範本</block>
+  <block id="cd05e30aad2bf16b78d020365a79dcae" category="list-text"><block ref="cd05e30aad2bf16b78d020365a79dcae" category="inline-link-rx"></block></block>
+  <block id="1636ba950a663744d701c73060d64523" category="inline-link">瞭解如何Azure NetApp Files 從範本建立一套功能不全的功能</block>
+  <block id="5651031c9f0714bccf2089b101c736e0" category="list-text"><block ref="5651031c9f0714bccf2089b101c736e0" category="inline-link-rx"></block></block>
+  <block id="dbbd746e2d2c019dcb0c3c40b74f4f75" category="section-title">2021年3月8日</block>
+  <block id="de5b4c52cc860c2f7cacca0bb7f4265f" category="section-title">動態變更服務層級</block>
+  <block id="65ade213f17aabb636c7c98c83fa9121" category="paragraph">您現在可以動態變更磁碟區的服務層級、以滿足工作負載需求並最佳化成本。該磁碟區會移至其他容量集區、而不會影響該磁碟區。</block>
+  <block id="f89e84889d5fd0c46e9997ddb21ac922" category="inline-link">瞭解如何變更Volume的服務層級</block>
+  <block id="1ae0904e8670b3e6cfc9006eb635216b" category="paragraph"><block ref="e311d6cb2bd5a49340f86a76ff0511b7" category="inline-link-rx"></block>。</block>
+  <block id="95fa237a7a6265df02b6172c4be387f7" category="section-title">2020年8月3日</block>
+  <block id="629ca03a8a495acd7bc18927ca4da6cc" category="section-title">設定與管理Azure NetApp Files</block>
+  <block id="51faca1c58439a1d1223104a28f554cc" category="paragraph">直接從Cloud Manager設定及管理Azure NetApp Files 功能。建立Azure NetApp Files 一個不完整的工作環境之後、您可以完成下列工作：</block>
+  <block id="a42ed9034f13a0f6a3660f2c241f605f" category="list-text">建立NFS和SMB磁碟區。</block>
+  <block id="0d293213ebed3e92e24e1624dfd19aa2" category="list-text">管理容量資源池和Volume快照</block>
+  <block id="e54595e40dfd177a2a9e671c794a3a4d" category="paragraph">Cloud Manager可讓您建立、刪除及還原Volume快照。您也可以建立新的容量集區、並指定其服務層級。</block>
+  <block id="5054d68a0b2f03dece3eb72cfaa09427" category="list-text">變更磁碟區的大小及管理標記、以編輯磁碟區。</block>
+  <block id="396a3c9fb559d38e68f68ea139b3539a" category="paragraph">直接Azure NetApp Files 從Cloud Manager建立及管理功能可取代先前的資料移轉功能。</block>
+  <block id="173fd2f937506a4111b0bc09349619a8" category="section-title">2020年4月5日</block>
+  <block id="02a58c551f186d8f833147198d69fb26" category="section-title">資料移轉至Azure NetApp Files</block>
+  <block id="8d30064c294030bc7a1446fe0cf94ca9" category="paragraph">您現在可以Azure NetApp Files 直接從Cloud Manager將NFS或SMB資料移轉至支援功能。資料同步是由NetApp Cloud Sync 的《不同步服務（Syncss）：</block>
+  <block id="8314edb21bf66f4096470cb83529f253" category="summary">支援企業在 Azure 中移轉及執行效能密集且對延遲敏感的核心業務關鍵應用程式、而不需重新調整雲端的因素。 Azure NetApp Files</block>
+  <block id="8b53faee27870b72e0be69261d54a7ee" category="doc">深入瞭解 Azure NetApp Files</block>
+  <block id="98f770b0af18ca763421bac22b4b6805" category="section-title">功能</block>
+  <block id="b4afab774d5aae036a66f2e95c63406b" category="list-text">支援多種傳輸協定、可讓 Linux 與 Windows 應用程式在 Azure 中順暢執行。</block>
+  <block id="86431e70f2e01436434235b95f27507f" category="list-text">多個效能層級可與工作負載效能需求緊密一致。</block>
+  <block id="0f5101975c831a1a6350155e818d4cbf" category="list-text">SAP HANA、GDPR及HIPAA等領先業界的認證、可將要求最嚴苛的工作負載移轉至Azure。</block>
+  <block id="4b892d08b42aafcd301b83ab05b6e993" category="section-title">Cloud Manager 的其他功能</block>
+  <block id="f6c2d8c0ac94af2ace6bb1a673a447e2" category="list-text">直接從 Cloud Manager 將 NFS 或 SMB 資料移轉 Azure NetApp Files 至支援功能。資料移轉是以 NetApp Cloud Sync 的「支援」服務為後盾。</block>
+  <block id="c9e8b2e7aec1baa65efcbe84dfc9d0ed" category="inline-link">深入瞭Cloud Sync 解功能</block>
+  <block id="707476b7ceb8bcfdb9c13e59859ae97a" category="paragraph"><block ref="707476b7ceb8bcfdb9c13e59859ae97a" category="inline-link-rx"></block></block>
+  <block id="25c46bef01bcfa77e5905b1d3308762a" category="list-text">Cloud Data Sense採用人工智慧（AI）導向技術、可協助您瞭解資料內容、並識別Azure NetApp Files 駐留在您的不實帳戶中的敏感資料。</block>
+  <block id="a11b0fe7d09898eeb7b50552e83ef426" category="inline-link">深入瞭解Cloud Data Sense</block>
+  <block id="3af0f3d8f43764595483a67930d47716" category="paragraph"><block ref="3af0f3d8f43764595483a67930d47716" category="inline-link-rx"></block></block>
+  <block id="20b4f77bd00b4f63a49ec8e08f3bf6a6" category="section-title">成本</block>
+  <block id="b8371ae9d98b29b8335a4aea09cdaff3" category="inline-link">檢視 Azure NetApp Files 報價</block>
+  <block id="4b3f21f8a5b6bf8c27f851053be34ac4" category="paragraph"><block ref="4b3f21f8a5b6bf8c27f851053be34ac4" category="inline-link-rx"></block></block>
+  <block id="78f4bff896307cc838c262e1e49d9102" category="paragraph">請注意、您的訂閱和收費是 Azure NetApp Files 由不受 Cloud Manager 保護的功能由不受此功能保護的功能所維護。</block>
+  <block id="8c4b25218155a1fdb972f4169855d04f" category="section-title">支援的地區</block>
+  <block id="d6c4ca89b6d4950d0522d6198b27af71" category="inline-link">檢視支援的 Azure 地區</block>
+  <block id="e478c46d3908f35ce837f4cc77afb89b" category="paragraph"><block ref="e478c46d3908f35ce837f4cc77afb89b" category="inline-link-rx"></block></block>
+  <block id="20c404f3ca0633629eee9b1b4ccd6737" category="section-title">取得協助</block>
+  <block id="edc3629fc8102552dbd6ec1e10e2b821" category="paragraph">如需 Azure NetApp Files 有關支援方面的技術支援問題、請使用 Azure 入口網站將支援要求記錄給 Microsoft 。選取您的相關 Microsoft 訂閱、然後在 Azure NetApp Files * Storage* 下選取 * 《 * 》服務名稱。提供建立 Microsoft 支援要求所需的其餘資訊。</block>
+  <block id="f6bd0d7447ff66cc6b859603a88fbde9" category="section-title">相關連結</block>
+  <block id="aaffbc2ddc4092e845b033a565e591fb" category="inline-link">NetApp Cloud Central Azure NetApp Files</block>
+  <block id="2a8128d1d5b93234cc425f95b2e992d8" category="list-text"><block ref="2a8128d1d5b93234cc425f95b2e992d8" category="inline-link-rx"></block></block>
+  <block id="844f85f22af5197ff73f93313cd94cd1" category="list-text"><block ref="844f85f22af5197ff73f93313cd94cd1" category="inline-link-rx"></block></block>
+  <block id="815e6b3583bbc9969fd306b9391ed0cb" category="inline-link">本文檔 Cloud Sync</block>
+  <block id="e66ce730725b027d172b1b3ee7612614" category="list-text"><block ref="e66ce730725b027d172b1b3ee7612614" category="inline-link-rx"></block></block>
+  <block id="2433628c53fed80ea9d352a1bcd9ce45" category="summary">請依照下列步驟快速入門、或向下捲動至其餘部分以取得完整詳細資料。</block>
+  <block id="5bfad4d83a647919018a0bb53b602ce1" category="doc">快速入門Azure NetApp Files</block>
+  <block id="597907fb22ffd6d5d99abe19205161d6" category="paragraph">請依照下列步驟快速入門、或依照連結取得完整詳細資料。</block>
+  <block id="5ef8b3581bd08eb7bd7df9da47cee4d9" category="paragraph">從 Azure 授予 Azure AD 應用程式權限、並複製應用程式（用戶端） ID 、目錄（租戶） ID 及用戶端機密的值。</block>
+  <block id="4a6368bcf7e7a78b87f63c25a1738dcd" category="inline-link-macro">瞭解如何設定Azure AD應用程式</block>
+  <block id="907e63fbdb2ca8abc79587ef5c9c9829" category="paragraph"><block ref="44b9747affc4b1ae04a7846ac71363e4" category="inline-link-macro-rx"></block>。</block>
+  <block id="2ce12157a5c44e5f94e50d438ab296af" category="paragraph">在 Cloud Manager 中、按一下 * 新增工作環境 * &gt; * Microsoft Azure * &gt; * Azure NetApp Files Sfor * 、然後提供 AD 應用程式的詳細資料。</block>
+  <block id="328958ba41a282fb8b8b971eb10845bd" category="inline-link-macro">瞭解如何建立工作環境</block>
+  <block id="75aec57e5da1cc40dc30b7d1be476ab4" category="paragraph"><block ref="87d286565b204dd2a8d4bf83463a6fe9" category="inline-link-macro-rx"></block>。</block>
+  <block id="3c10116b37b407ac79092a38ffb292e4" category="summary">在您透過NetApp技術支援開啟支援案例之前、您必須先將NetApp支援網站帳戶新增至Cloud Manager、然後註冊以取得支援。</block>
+  <block id="42748df9eaa0be17ddc5cc1593cf57ab" category="doc">註冊以取得支援</block>
+  <block id="aeaeee19a7c393222e407a525cf01991" category="section-title">新增一個NSS帳戶</block>
+  <block id="de2241fea60d98698faaa196ff73ee80" category="paragraph">「支援儀表板」可讓您從單一位置新增及管理所有NetApp支援網站帳戶。</block>
+  <block id="5be2593b5948f30a15179a32daa73ee2" category="inline-link">註冊一項</block>
+  <block id="14b05cf61f1aba58d38b393e69b69538" category="list-text">如果您還沒有 NetApp 支援網站帳戶、<block ref="0a8e82436ea73fe635862cfba3acf101" category="inline-link-rx"></block>。</block>
+  <block id="0046efb3377274ff3215d4b30269809e" category="list-text">在Cloud Manager主控台右上角、按一下「說明」圖示、然後選取*「支援」*。</block>
+  <block id="b50f0a46135bcb7083b1f2f82032fc26" category="inline-image-macro">「說明」功能表的快照、其中「支援」是第一個列出的選項</block>
+  <block id="868d9aa88f16ea923af1d15eac5d2647" category="paragraph"><block ref="868d9aa88f16ea923af1d15eac5d2647" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="d17d6b5dafebab6b7659da8850737e70" category="list-text">按一下「*」「nss管理」&gt;「新增nssAccount」*。</block>
+  <block id="8aaf101e623c543c7eef3c65f6233366" category="list-text">出現提示時、按一下*繼續*以重新導向至Microsoft登入頁面。</block>
+  <block id="19d089db572ee6a1e154a0c9c9e57bfd" category="paragraph">NetApp使用Microsoft Azure Active Directory做為身分識別供應商、提供專為支援與授權所設計的驗證服務。</block>
+  <block id="465ec6d5eafa3524c948c99d8bfcd306" category="list-text">在登入頁面上、提供您的NetApp支援網站註冊電子郵件地址和密碼、以執行驗證程序。</block>
+  <block id="f5fb4199485234c409525f430b737010" category="paragraph">此動作可讓Cloud Manager使用您的NSS帳戶。</block>
+  <block id="b4c6a2f33e7b2a38495546b8d5cd8e84" category="paragraph">附註：帳戶必須是客戶層級的帳戶（非來賓帳戶或臨時帳戶）。</block>
+  <block id="fc65ebd4739f2f8ca46062a8280faea9" category="section-title">註冊您的帳戶以取得支援</block>
+  <block id="3e080914efe0d0ca025439fbb68d437f" category="paragraph">支援註冊可從支援儀表板的Cloud Manager取得。</block>
+  <block id="fb07bf6b7698dbe934b8b2164d915484" category="list-text">在* Resources（資源）*選項卡中，單擊* Register for Support*（註冊以獲得支持*）。</block>
+  <block id="392fb0270d0d84dbc3fdf8c67da1e5ad" category="list-text">選取您要登錄的NSS認證、然後按一下「*登錄*」。</block>
+  <block id="af08318aa95b670c097bf944ab12d208" category="summary">設定工作環境之後、您就可以建立Azure NetApp Files 各種帳戶、容量資源池和磁碟區。</block>
+  <block id="ba0aa3e7264cbd8d5a1204a3f3d868cc" category="doc">建立並掛載Volume以Azure NetApp Files 供使用</block>
+  <block id="1c27e11c5e65b93611e6f5ce640f8184" category="section-title">建立磁碟區</block>
+  <block id="15b71829402124199d38fc483f8a71b5" category="paragraph">您可以在新 Azure NetApp Files 的或現有的支援帳戶中建立 NFS 或 SMB 磁碟區。</block>
+  <block id="efc4120a3fbfbea33245fb931c324492" category="inline-xref">這些步驟</block>
+  <block id="0073916db272db24e4fb9b9c6bc9d6f6" category="paragraph">Cloud Manager功能稱為「範本」、可讓您針對特定應用程式（例如資料庫或串流服務）的工作負載需求、建立最佳化的磁碟區。如果您的組織已建立您應該使用的Volume範本、請遵循 <block ref="841f2986c591e442944fbc4b9e18c81f" category="inline-xref-macro-rx"></block>。</block>
+  <block id="135b308ed83c53f1516b7c754566d1c4" category="list-title">開始之前</block>
+  <block id="871a29db0a928b46295d82cee2357c13" category="list-text">若要使用SMB、您必須設定DNS和Active Directory。</block>
+  <block id="943219d5074bb5ad25a6a5caf2ffdd2a" category="list-text">規劃建立 SMB Volume 時、您必須擁有可連線的 Windows Active Directory 伺服器。建立磁碟區時、您將輸入此資訊。</block>
+  <block id="e0e02b01eefffa92ef6dd41ca0bfddaa" category="list-text">按一下「 * 新增 Volume * 」。</block>
+  <block id="8efbe080646813cd33c5297ebb1ef190" category="list-text">在每個頁面上提供必要資訊：</block>
+  <block id="0df0074f5bda9b547c12ff0ac8f4a896" category="list-text">* 《支援帳戶 * 》：選擇現有的支援帳戶或建立新帳戶。 Azure NetApp Files Azure NetApp Files建立新帳戶時、您也可以選擇要使用的資源群組。</block>
+  <block id="13ecbacd691c26d682199c2a13ae7ca8" category="inline-image-macro">建立 Azure NetApp Files 一個包含名稱、 Azure 訂閱、位置和資源群組之 Isname 帳戶所需欄位的快照。</block>
+  <block id="be40baf84cfc673a091dfd1b17d7663a" category="paragraph"><block ref="be40baf84cfc673a091dfd1b17d7663a" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="0dc3251c60a979588ce5f7932e69ba87" category="list-text">* 容量資源池 * ：選取現有的容量資源池或建立新的容量資源池。</block>
+  <block id="79f05e8f99917560625d1cf3f2d4fc5d" category="inline-link">服務層級</block>
+  <block id="c35795b8ffe511f480a251678339892b" category="paragraph">如果您建立新的容量集區、則需要指定大小並選取<block ref="f998dd47925b345cb96cc9547dcf35dc" category="inline-link-rx"></block>。</block>
+  <block id="a3c94c8b9f3c752262861375cf98a86e" category="paragraph">容量集區的最小大小為 4 TB 。您可以指定 4 TB 的倍數大小。</block>
+  <block id="485ef9124372f546b80f3713ee3e96b4" category="list-text">* 詳細資料與標籤 * ：輸入磁碟區名稱與大小、磁碟區應位於的 vnet 與子網路、以及選擇性地指定磁碟區的標籤。</block>
+  <block id="3b608e06daf087ff8d8ec6c3426b4e86" category="list-text">* 傳輸協定 * ：選擇 NFS 或 SMB 傳輸協定、然後輸入所需的資訊。</block>
+  <block id="91080ec993aad166af2bca2fdc134255" category="paragraph">以下是 NFS 詳細資料的範例。</block>
+  <block id="dea14d87fa3d65df58f3beda6ccb3a30" category="inline-image-macro">設定NFS Volume所需欄位的快照。</block>
+  <block id="643c51aaf0a263e7e8a915f608bbb548" category="paragraph"><block ref="643c51aaf0a263e7e8a915f608bbb548" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="8f470daf6cfa2970c8395cc6be9c7612" category="paragraph">以下是中小企業的詳細資料範例。設定第一個SMB Volume時、您需要在下一頁提供Active Directory資訊。</block>
+  <block id="384442b7c021ea920d5444dad3c474e3" category="inline-image-macro">設定SMB Volume所需欄位的快照。</block>
+  <block id="f4b5aaab764c0b2d36fafa41b62e1b0d" category="paragraph"><block ref="f4b5aaab764c0b2d36fafa41b62e1b0d" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="405c1e241cc1b6685d6c0cc7dbbc8042" category="list-text">如果您想要根據現有磁碟區的快照來建立此磁碟區、請從Snapshot Name（快照名稱）下拉式清單中選取快照。</block>
+  <block id="5e65e2e51d0d291499a42f54730e645c" category="list-text">按一下 * 新增 Volume * 。</block>
+  <block id="45dbe3c136df615d693b80183c277a3b" category="paragraph">新磁碟區會新增至工作環境。</block>
+  <block id="eaae7feedfb57c4ccdcc53c186726c56" category="inline-xref">掛載雲端Volume</block>
+  <block id="2f8952d0a4fb138ef90f78fb9a50fe88" category="paragraph">繼續 <block ref="b0f2178360372267ad19e1e8e4741e99" category="inline-xref-macro-rx"></block>。</block>
+  <block id="a37f6000ecd62b3a2058de32fa603d0a" category="section-title">從範本建立磁碟區</block>
+  <block id="4a856903cf54bbb57bd5703d54583103" category="paragraph">如果貴組織已建立Azure NetApp Files 了針對特定應用程式的工作負載需求最佳化的功能、以便部署這些磁碟區、請依照本節中的步驟進行。</block>
+  <block id="8d69897f39fda1e4779ad2d9ff4939c4" category="paragraph">範本應能讓您的工作更輕鬆、因為範本中已定義了某些Volume參數、例如容量集區、大小、傳輸協定、vnet和磁碟區應位於的子網路等。當參數已預先定義時、您只需跳至下一個Volume參數即可。</block>
+  <block id="f1a38681016ccf53a8d2c2fad98c7db2" category="list-text">在「畫版」頁面上、按一下Azure NetApp Files 您要配置Volume的功能區環境。</block>
+  <block id="024205acf9405311336c02bbd2193b70" category="inline-image-macro">更多按鈕</block>
+  <block id="f96393c48de5eddb1a2818124e9040b6" category="list-text">按一下 <block ref="c01b692574fda287c7455bfbcec2709c" category="inline-image-macro-rx" type="image"></block> &gt;*從範本新增Volume *。</block>
+  <block id="74099e7b70c30e3a55db543cda9bfc1e" category="inline-image-macro">顯示如何從範本新增磁碟區的快照。</block>
+  <block id="098587c5859901ecc32e7a709cb2129f" category="paragraph"><block ref="098587c5859901ecc32e7a709cb2129f" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="5b33742921c3a09b3c0916cff2d87632" category="list-text">在「選取範本_」頁面中、選取您要用來建立磁碟區的範本、然後按一下「*下一步*」。</block>
+  <block id="41fdbb8293e553892079d0e7ad8a9ad9" category="inline-image-macro">可用應用程式範本的快照。</block>
+  <block id="e9be4d5050c4e00aff6426b7045f1b6a" category="paragraph"><block ref="e9be4d5050c4e00aff6426b7045f1b6a" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="8675916eaff2fb10955e8a3b1b14108f" category="paragraph">此時會顯示「定義參數_」頁面。</block>
+  <block id="19f5b7f92268b2f8e63e4083819666c9" category="inline-image-macro">顯示空白範本的螢幕快照、您必須填寫才能建立Volume。</block>
+  <block id="93fdd25da4e72c932b99d601b637202f" category="paragraph"><block ref="93fdd25da4e72c932b99d601b637202f" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="31f425aaa6a26f3fc5e635704753602f" category="paragraph">*注意：*如果您想查看這些參數的值、可以按一下「Show read-only parameters*（顯示唯讀參數*）」核取方塊、以顯示範本已鎖定的所有欄位。根據預設、這些預先定義的欄位會隱藏、只會顯示您需要填寫的欄位。</block>
+  <block id="b4798c3f6907cfb67d2e44f900cd8761" category="inline-xref">建立磁碟區</block>
+  <block id="10b6f03dce4e3f947d351798e239e1a9" category="list-text">新增所有非模板硬編碼的參數值。請參閱 <block ref="0987d6f2734ae944e1736c1f24a760ec" category="inline-xref-macro-rx"></block> 如需部署Azure NetApp Files 一套解決方案的所有必要參數詳細資訊、請參閱。</block>
+  <block id="2bc51d1d472e80f2611fe5ff280c4ebe" category="list-text">定義完此Volume所需的所有參數後、請按一下*執行範本*。</block>
+  <block id="b185109168e53693f7b6943d7df66166" category="paragraph">Cloud Manager會配置磁碟區並顯示頁面、以便您查看進度。</block>
+  <block id="40136e65ff57723941fc2af2bf21d54a" category="inline-image-macro">快照顯示從範本建立新磁碟區的進度。</block>
+  <block id="4ad07dd99a58c5fa556826f4f972a56e" category="paragraph"><block ref="4ad07dd99a58c5fa556826f4f972a56e" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="3fcf4599fd910141dcd628a7411238d5" category="paragraph">然後新磁碟區便會新增至工作環境。</block>
+  <block id="0753d577f87c3ce7385e295a5cc23407" category="paragraph">繼續掛載雲端磁碟區。</block>
+  <block id="2a4a19d3d732c5f7aa35fa729ac0d8ac" category="section-title">掛載磁碟區</block>
+  <block id="86a3efaabfd178d684bcd98f4cd6434c" category="paragraph">從 Cloud Manager 存取掛載指示、以便將磁碟區掛載至主機。</block>
+  <block id="8298547bbbd227879ca27d72eedeb07a" category="list-text">將游標移到磁碟區上、然後選取 * 掛載磁碟區 * 。</block>
+  <block id="ed098667e58a3c583c4147e4fd6baaa8" category="inline-image-macro">當您將游標暫留在磁碟區上時、可用作業的快照。</block>
+  <block id="2bfbdc93a5a4003da1039544054d6805" category="paragraph"><block ref="2bfbdc93a5a4003da1039544054d6805" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="38aa5b57f82843fe74bb954a343bf4e0" category="list-text">請依照指示來掛載磁碟區。</block>
+  <block id="7ff191df90fac0fa94ab5c2b5101a5e9" category="sidebar">所有Cloud Manager文件</block>
+  <block id="d75d347ae1d51e933d39fea688b0abf1" category="sidebar">文件Azure NetApp Files</block>
+  <block id="7d0ee6fed10d3d4e5c9ee496729ab519" category="sidebar">版本資訊</block>
+  <block id="be11c74c1dd7f307bb80183a90dc2067" category="sidebar">開始使用</block>
+  <block id="06ad314b340900d226b1196e1fe289e9" category="sidebar">快速入門</block>
+  <block id="edbcf53081d21cc9d84e0c1b1c31c425" category="sidebar">建立工作環境</block>
+  <block id="6ade0d3f74b8a5014c9cb307d47a0cb4" category="sidebar">使用Azure NetApp Files</block>
+  <block id="9be5a2eae9bab39aee7d0161c137cd43" category="sidebar">建立及掛載磁碟區</block>
+  <block id="9038e7cfcfe9bb9df9afd31371070be8" category="sidebar">管理現有磁碟區</block>
+  <block id="0adc03eac86772ad2c75c8f140be417e" category="sidebar">知識與支援</block>
+  <block id="e2439a8512b353f75391ba9c346bc84d" category="sidebar">管理磁碟區</block>
+  <block id="813011e2103649bb71f124adedcc10ea" category="sidebar">部落格社群</block>
+  <block id="dd490b81914dd945601e442a41cb4222" category="sidebar">NetApp社群</block>
+  <block id="ff6c37cbc252e306a6b4e390ec13cbc1" category="sidebar">Cloud Central部落格</block>
+  <block id="ad203e818e0c9d7f42f1c260b33875f3" category="sidebar">雲端網路研討會</block>
+</blocks>

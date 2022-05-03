@@ -1,0 +1,33 @@
+---
+sidebar: sidebar 
+permalink: task-create-working-env.html 
+keywords: azure netapp files, create working environment, working environment 
+summary: 在您設定Azure Active Directory應用程式之後、Azure NetApp Files 請在Cloud Manager中建立一個運作不正常的環境、以便您開始建立所需的磁碟區。 
+---
+= 打造 Azure NetApp Files 一個不一樣的工作環境
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+在您設定Azure Active Directory應用程式之後、Azure NetApp Files 請在Cloud Manager中建立一個運作不正常的環境、以便您開始建立所需的磁碟區。
+
+.步驟
+. 在「畫版」頁面中、按一下「 * 新增工作環境 * 」。
+. 選擇 * Microsoft Azure * 、然後選擇 * Azure NetApp Files 《 * 》。
+. 提供您先前設定之 AD 應用程式的詳細資料。
++
+image:screenshot_anf_details.gif["建立 Azure NetApp Files 功能不全的環境所需欄位的快照、其中包含名稱、應用程式 ID 、用戶端機密和目錄 ID 。"]
+
+. 按一下「 * 新增 * 」。
+
+
+現在您應該擁有 Azure NetApp Files 一個不再只是運作的環境。
+
+image:screenshot_anf_we.gif["一份關於整個作業環境的快照 Azure NetApp Files 。"]
+
+link:task-create-volumes.html["開始建立及管理磁碟區"]。
