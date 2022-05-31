@@ -89,7 +89,7 @@ image:screenshot_azure_access_control.gif["顯示在Azure入口網站中新增�
 [source, json]
 ----
 "actions": [
-    "Microsoft.NetApp/*",
+    "Microsoft.NetApp/*"
     ],
 ----
 .. 按一下「 * 儲存 * 」、按一下「 * 下一步 * 」、然後按一下「 * 建立 * 」。
