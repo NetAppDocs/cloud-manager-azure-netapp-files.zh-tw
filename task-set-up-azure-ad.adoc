@@ -84,12 +84,18 @@ image:screenshot_azure_access_control.gif["顯示在Azure入口網站中新增�
 
 .. 在「 * 基礎知識 * 」標籤中、輸入角色的名稱和說明。
 .. 按一下「 * JSON* 」、然後按一下「 * 編輯 * 」、此「編輯 * 」會顯示在 JSON* 格式的右上角。
-.. 在_actions_下新增下列權限：
+.. 在 _actions_ 下新增下列權限：
 +
 [source, json]
 ----
 "actions": [
-    "Microsoft.NetApp/*"
+    "Microsoft.NetApp/*",
+    "Microsoft.Resources/resources/read",
+    "Microsoft.Resources/subscriptions/resourceGroups/read",
+    "Microsoft.Resources/subscriptions/resourcegroups/resources/read",
+    "Microsoft.Resources/subscriptions/resourceGroups/write",
+    "Microsoft.Network/virtualNetworks/read",
+    "Microsoft.Insights/Metrics/Read"
     ],
 ----
 .. 按一下「 * 儲存 * 」、按一下「 * 下一步 * 」、然後按一下「 * 建立 * 」。

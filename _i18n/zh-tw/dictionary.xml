@@ -57,7 +57,6 @@
   <block id="bf972dc955fe2e7fb9df0a81d06fb348" category="paragraph"><block ref="bf972dc955fe2e7fb9df0a81d06fb348" category="inline-image-macro-rx" type="image"></block></block>
   <block id="f8dea6ae979907327757e0387e92f235" category="list-text">在「 * 基礎知識 * 」標籤中、輸入角色的名稱和說明。</block>
   <block id="8060604257723ca88e5c0b4aae811455" category="list-text">按一下「 * JSON* 」、然後按一下「 * 編輯 * 」、此「編輯 * 」會顯示在 JSON* 格式的右上角。</block>
-  <block id="d5d094d4ecda4349274d6b72850a5740" category="list-text">在_actions_下新增下列權限：</block>
   <block id="afa30cd5df0391dfd6e11ab6184d695b" category="list-text">按一下「 * 儲存 * 」、按一下「 * 下一步 * 」、然後按一下「 * 建立 * 」。</block>
   <block id="1b9c98eb7545f64f6a6464cd44cdd443" category="list-text">現在請將應用程式指派給您剛建立的角色：</block>
   <block id="973ddd4ad0d28fecb4f9f0a53ca5ab21" category="list-text">從 Azure 入口網站開啟 * 訂閱 * 服務。</block>
@@ -291,7 +290,6 @@
   <block id="ed098667e58a3c583c4147e4fd6baaa8" category="inline-image-macro">當您將游標暫留在磁碟區上時、可用作業的快照。</block>
   <block id="2bfbdc93a5a4003da1039544054d6805" category="paragraph"><block ref="2bfbdc93a5a4003da1039544054d6805" category="inline-image-macro-rx" type="image"></block></block>
   <block id="38aa5b57f82843fe74bb954a343bf4e0" category="list-text">請依照指示來掛載磁碟區。</block>
-  <block id="7ff191df90fac0fa94ab5c2b5101a5e9" category="sidebar">所有Cloud Manager文件</block>
   <block id="d75d347ae1d51e933d39fea688b0abf1" category="sidebar">文件Azure NetApp Files</block>
   <block id="7d0ee6fed10d3d4e5c9ee496729ab519" category="sidebar">版本資訊</block>
   <block id="be11c74c1dd7f307bb80183a90dc2067" category="sidebar">開始使用</block>
@@ -306,4 +304,5 @@
   <block id="dd490b81914dd945601e442a41cb4222" category="sidebar">NetApp社群</block>
   <block id="ff6c37cbc252e306a6b4e390ec13cbc1" category="sidebar">Cloud Central部落格</block>
   <block id="ad203e818e0c9d7f42f1c260b33875f3" category="sidebar">雲端網路研討會</block>
+  <block id="0b7a672df763c13d4ee88f17e17d5dd5" category="list-text">在 _actions_ 下新增下列權限：</block>
 </blocks>
